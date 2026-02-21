@@ -1,0 +1,21 @@
+#!/system/bin/sh
+# GANTI tanda * di bawah dengan nama folder asli yang muncul di 'ls /sys/class/leds/'
+R="/sys/class/leds/0005:054C:09CC.0003:red/brightness"
+G="/sys/class/leds/0005:054C:09CC.0003:green/brightness"
+B="/sys/class/leds/0005:054C:09CC.0003:blue/brightness"
+
+case $1 in
+  "asli")
+    echo 0 > $R; echo 0 > $G; echo 255 > $B ;;
+  "rgb")
+    while true; do
+      echo 255 > $R; sleep 0.5; echo 0 > $R
+      echo 255 > $G; sleep 0.5; echo 0 > $G
+      echo 255 > $B; sleep 0.5; echo 0 > $B
+    done ;;
+  "polisi")
+    while true; do
+      echo 255 > $R; echo 0 > $B; sleep 0.2
+      echo 0 > $R; echo 255 > $B; sleep 0.2
+    done ;;
+esac
