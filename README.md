@@ -1,14 +1,17 @@
 🎮 Change-Led-DS4-Root-Only
 Script sederhana untuk mengubah warna LED pada kontroler DualShock 4 langsung dari HP Android. Penting: Perangkat kamu wajib sudah dalam keadaan ROOT.
+
 📋 Persyaratan
 Perangkat Android yang sudah di-Root.
 Aplikasi Termux (disarankan unduh dari F-Droid).
 Kontroler DualShock 4 yang sudah terhubung ke Android (via Bluetooth atau kabel OTG).
+
 🚀 Cara Penggunaan
 Ikuti langkah-langkah berikut di dalam terminal Termux:
+
 1. Persiapan Awal
 Pastikan package git sudah terinstall:
-bash
+```bash
 pkg update && pkg upgrade
 pkg install git -y
 Gunakan kode dengan hati-hati.
